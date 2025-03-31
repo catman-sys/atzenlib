@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gästebuch</title>
+</head>
+<body>
+    <h1>Schreib ins Gästebuch</h1>
+    <form action="/eintrag" method="post">
+        Name: <input name="name"><br>
+        Nachricht: <input name="nachricht"><br>
+        <input type="submit" value="Absenden">
+    </form>
+
+    <h2>Bisherige Einträge:</h2>
+    <ul>
+        {% for eintrag in eintraege %}
+            <li><strong>{{ eintrag.name }}</strong>: {{ eintrag.nachricht }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
