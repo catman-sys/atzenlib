@@ -19,7 +19,7 @@ def guestbook():
         entries = []
 
     return render_template_string('''
-        <h1>Gästebuch</h1>
+        <h1>Atzenblog</h1>
         <form method="post">
             <label>Name:</label><br>
             <input name="name"><br>
